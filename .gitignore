@@ -25,7 +25,7 @@ coverage
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
-OtheloController.min.js
+client.min.js
 
 # Dependency directories
 node_modules
