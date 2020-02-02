@@ -240,38 +240,38 @@ const changeStateOnClick= function(playerTurn,row,col,checkRight,checkLeft,check
     if(eval(checkTopRight)){
         let newRow = row;
         let newCol = col;
-        while(boardState[newRow][newCol]!=playerTurn){
+        do{
             boardState[newRow][newCol] = playerTurn;
             newCol++;
             newRow--;
-        }
+        }while(boardState[newRow][newCol]!=playerTurn)
     }
     if(eval(checkTopLeft)){
         let newRow = row;
         let newCol = col;
-        while(boardState[newRow][newCol]!=playerTurn){
+        do{
             boardState[newRow][newCol] = playerTurn;
             newCol--;
             newRow--;
-        }
+        }while(boardState[newRow][newCol]!=playerTurn)
     }
     if(eval(checkBelowLeft)){
         let newRow = row;
         let newCol = col;
-        while(boardState[newRow][newCol]!=playerTurn){
+        do{
             boardState[newRow][newCol] = playerTurn;
             newCol--;
             newRow++;
-        }
+        }while(boardState[newRow][newCol]!=playerTurn)
     }
     if(eval(checkBelowRight)){
         let newRow = row;
         let newCol = col;
-        while(boardState[newRow][newCol]!=playerTurn){
+        do{
             boardState[newRow][newCol] = playerTurn;
             newCol++;
             newRow++;
-        }
+        }while(boardState[newRow][newCol]!=playerTurn)
     }
     return boardState;
 }
