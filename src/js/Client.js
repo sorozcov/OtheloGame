@@ -207,35 +207,35 @@ const changeStateOnClick= function(playerTurn,row,col,checkRight,checkLeft,check
     if(eval(checkRight)){
         let newRow = row;
         let newCol = col;
-        while(boardState[newRow][newCol]!=playerTurn){
+       do{
             boardState[newRow][newCol] = playerTurn;
             newCol++;
-        }
+        } while(boardState[newRow][newCol]!=playerTurn);
     }
     if(eval(checkLeft)){
         let newRow = row;
         let newCol = col;
-        while(boardState[newRow][newCol]!=playerTurn){
+       do{
             boardState[newRow][newCol] = playerTurn;
             newCol--;
-        }
+        } while(boardState[newRow][newCol]!=playerTurn);
     }
     if(eval(checkBelow)){
         let newRow = row;
         let newCol = col;
-        while(boardState[newRow][newCol]!=playerTurn){
+        do{
             boardState[newRow][newCol] = playerTurn;
             newRow++;
-        }
+        }while(boardState[newRow][newCol]!=playerTurn);
 
     }
     if(eval(checkTop)){
         let newRow = row;
         let newCol = col;
-        while(boardState[newRow][newCol]!=playerTurn){
+        do{
             boardState[newRow][newCol] = playerTurn;
             newRow--;
-        }
+        }while(boardState[newRow][newCol]!=playerTurn);
     }
     if(eval(checkTopRight)){
         let newRow = row;
@@ -244,7 +244,7 @@ const changeStateOnClick= function(playerTurn,row,col,checkRight,checkLeft,check
             boardState[newRow][newCol] = playerTurn;
             newCol++;
             newRow--;
-        }while(boardState[newRow][newCol]!=playerTurn)
+        }while(boardState[newRow][newCol]!=playerTurn);
     }
     if(eval(checkTopLeft)){
         let newRow = row;
@@ -253,7 +253,7 @@ const changeStateOnClick= function(playerTurn,row,col,checkRight,checkLeft,check
             boardState[newRow][newCol] = playerTurn;
             newCol--;
             newRow--;
-        }while(boardState[newRow][newCol]!=playerTurn)
+        }while(boardState[newRow][newCol]!=playerTurn);
     }
     if(eval(checkBelowLeft)){
         let newRow = row;
@@ -262,7 +262,7 @@ const changeStateOnClick= function(playerTurn,row,col,checkRight,checkLeft,check
             boardState[newRow][newCol] = playerTurn;
             newCol--;
             newRow++;
-        }while(boardState[newRow][newCol]!=playerTurn)
+        }while(boardState[newRow][newCol]!=playerTurn);
     }
     if(eval(checkBelowRight)){
         let newRow = row;
@@ -271,7 +271,7 @@ const changeStateOnClick= function(playerTurn,row,col,checkRight,checkLeft,check
             boardState[newRow][newCol] = playerTurn;
             newCol++;
             newRow++;
-        }while(boardState[newRow][newCol]!=playerTurn)
+        }while(boardState[newRow][newCol]!=playerTurn);
     }
     return boardState;
 }
